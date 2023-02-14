@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import com.bumptech.glide.Glide
 import com.kirill1995.kazzak.R
 import com.kirill1995.kazzak.databinding.TodayCustomViewBinding
 import com.kirill1995.kazzak.databinding.WeekDayCustomViewBinding
@@ -46,6 +47,12 @@ class WeekDayCustomView(context: Context, attrs: AttributeSet): LinearLayout(con
 
     fun setImage(image: Int) {
         vbWeekDay.ivWeatherWeekDay.setBackgroundResource(image)
+    }
+
+    fun setImageFromApi(url: String) {
+        Glide.with(vbWeekDay.ivWeatherWeekDay)
+            .load(url)
+            .into(vbWeekDay.ivWeatherWeekDay)
     }
 
     fun setTemperature(temperature: String) {

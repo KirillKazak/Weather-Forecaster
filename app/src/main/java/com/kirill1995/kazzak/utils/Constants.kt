@@ -8,5 +8,6 @@ object Constants {
     const val GEO_API_KEY = "K2EUL0KJ1ALlFU5"
 
     const val WEATHER_API_LINK = "https://api.openweathermap.org"
+    const val WEATHER_API_IMAGE_LINK = "http://openweathermap.org/img/wn/"
     const val GEO_API_LINK = "http://pro.ip-api.com/"
 }

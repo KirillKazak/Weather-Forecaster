@@ -13,6 +13,7 @@ class WeatherApiConfig {
         retrofitWeather.create(WeatherApi::class.java)
     }
 
+    //TODO("Create function")
     private val retrofitWeather by lazy {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY

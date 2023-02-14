@@ -13,6 +13,7 @@ class GeoApiConfig {
         retrofitGeo.create(GeoApi::class.java)
     }
 
+    //TODO("Create function")
     private val retrofitGeo by lazy {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
