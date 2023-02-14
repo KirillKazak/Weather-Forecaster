@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_regular">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_main_weather">40sp</dimen>
+
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">36dp</dimen>
+    <dimen name="margin_pop_up_horizontal">-12dp</dimen>
+
+    <dimen name="radius_pop_up">24dp</dimen>
+
+    <dimen name="size_search_icon">30dp</dimen>
+    <dimen name="size_forecast_icons">30dp</dimen>
+    <dimen name="size_main_weather">120dp</dimen>
+    <dimen name="size_weather_today">36dp</dimen>
+    <dimen name="size_space_today">4dp</dimen>
+    <dimen name="size_space_week_day">8dp</dimen>
+
+
+</resources>

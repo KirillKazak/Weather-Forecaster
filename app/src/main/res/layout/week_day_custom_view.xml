@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_pop_up"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Space
+        android:layout_width="@dimen/size_space_week_day"
+        android:layout_height="@dimen/size_space_week_day"/>
+
+    <TextView
+        android:id="@+id/tv_day_week_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:textAlignment="center"
+        tools:text="Mon"/>
+
+    <Space
+        android:layout_width="@dimen/size_space_today"
+        android:layout_height="@dimen/size_space_today"/>
+
+    <TextView
+        android:id="@+id/tv_date_week_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_wight_alpha70"
+        android:textSize="@dimen/text_size_small"
+        android:textAlignment="center"
+        tools:text="10/08"/>
+
+    <Space
+        android:layout_width="@dimen/size_space_today"
+        android:layout_height="@dimen/size_space_today"/>
+
+    <ImageView
+        android:id="@+id/iv_weather_week_day"
+        android:layout_width="@dimen/size_weather_today"
+        android:layout_height="@dimen/size_weather_today"
+        android:background="@drawable/icon_sunny"/>
+
+    <Space
+        android:layout_width="@dimen/size_space_today"
+        android:layout_height="@dimen/size_space_today"/>
+
+    <TextView
+        android:id="@+id/tv_temperature_week_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small"
+        android:textAlignment="center"
+        tools:text="3°/-3°"
+        android:paddingHorizontal="@dimen/size_space_week_day"/>
+
+    <Space
+        android:layout_width="@dimen/size_space_week_day"
+        android:layout_height="@dimen/size_space_week_day"/>
+</LinearLayout>

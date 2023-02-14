@@ -10,7 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class WeatherInCurrentLocationViewModel(
+class HomeViewModel(
     private val getThreeHourForecastFiveDaysDataUseCase: GetThreeHourForecastFiveDaysDataUseCase,
     private val getGeoDataUseCase: GetGeoDataUseCase
 ): ViewModel() {
