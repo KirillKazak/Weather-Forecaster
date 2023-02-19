@@ -1,4 +1,4 @@
-package com.kirill1995.kazzak.ui.weatherInCurrentLocation
+package com.kirill1995.kazzak.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

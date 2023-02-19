@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.weatherInCurrentLocation.HomeFragment"
+    tools:context=".ui.home.HomeFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -222,114 +222,18 @@
             app:layout_constraintEnd_toEndOf="@id/iv_pop_up_today_home"
             app:layout_constraintTop_toTopOf="@id/iv_pop_up_today_home" />
 
-        <HorizontalScrollView
-            android:id="@+id/scroll_view_today_home"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_today_home"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginHorizontal="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="@id/iv_pop_up_today_home"
             app:layout_constraintEnd_toEndOf="@id/iv_pop_up_today_home"
             app:layout_constraintTop_toBottomOf="@id/tv_today_home"
-            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_today_home">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_00"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="00:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_03"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="03:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_06"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="06:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_09"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="09:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_12"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="12:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="15:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_18"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="18:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                    <Space
-                        android:layout_width="@dimen/size_space_today"
-                        android:layout_height="@dimen/size_space_today"/>
-                    <com.kirill1995.kazzak.utils.custom.TodayCustomView
-                        android:id="@+id/today_in_21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="@dimen/margin_small"
-                        android:layout_marginStart="@dimen/margin_small"
-                        tools:today_time="21:00"
-                        tools:today_image="@drawable/icon_sunny"
-                        tools:today_temperature="-25℃" />
-                </LinearLayout>
-        </HorizontalScrollView>
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_today_home"
+            tools:listitem="@layout/today_custom_view"/>
 
         <ImageView
             android:id="@+id/iv_sun_level_home"
@@ -407,72 +311,16 @@
             app:layout_constraintEnd_toEndOf="@id/iv_sun_level_home"
             app:layout_constraintTop_toBottomOf="@id/iv_time_sun_set_home" />
 
-        <com.kirill1995.kazzak.utils.custom.WeekDayCustomView
-            android:id="@+id/week_day_1"
-            android:layout_width="wrap_content"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_weekday_home"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_large"
+            android:orientation="horizontal"
             android:layout_marginTop="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/week_day_2"
-            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"
-            app:week_day_day="Mon"
-            app:week_day_date="10/11"
-            app:week_day_image="@drawable/icon_sunny"
-            app:week_day_temperature="3°/-3°"/>
-
-        <com.kirill1995.kazzak.utils.custom.WeekDayCustomView
-            android:id="@+id/week_day_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            app:layout_constraintStart_toEndOf="@id/week_day_1"
-            app:layout_constraintEnd_toStartOf="@id/week_day_3"
-            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"
-            app:week_day_day="Mon"
-            app:week_day_date="10/11"
-            app:week_day_image="@drawable/icon_sunny"
-            app:week_day_temperature="3°/-3°"/>
-
-        <com.kirill1995.kazzak.utils.custom.WeekDayCustomView
-            android:id="@+id/week_day_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            app:layout_constraintStart_toEndOf="@id/week_day_2"
-            app:layout_constraintEnd_toStartOf="@id/week_day_4"
-            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"
-            app:week_day_day="Mon"
-            app:week_day_date="10/11"
-            app:week_day_image="@drawable/icon_sunny"
-            app:week_day_temperature="3°/-3°"/>
-
-        <com.kirill1995.kazzak.utils.custom.WeekDayCustomView
-            android:id="@+id/week_day_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
-            app:layout_constraintStart_toEndOf="@id/week_day_3"
-            app:layout_constraintEnd_toStartOf="@id/week_day_5"
-            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"
-            app:week_day_day="Mon"
-            app:week_day_date="10/11"
-            app:week_day_image="@drawable/icon_sunny"
-            app:week_day_temperature="3°/-3°"/>
-
-        <com.kirill1995.kazzak.utils.custom.WeekDayCustomView
-            android:id="@+id/week_day_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_large"
-            android:layout_marginTop="@dimen/margin_small"
-            app:layout_constraintStart_toEndOf="@id/week_day_4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"
-            app:week_day_day="Mon"
-            app:week_day_date="10/11"
-            app:week_day_image="@drawable/icon_sunny"
-            app:week_day_temperature="3°/-3°"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"/>
 
         <ImageView
             android:id="@+id/iv_pop_up_summary_home"
@@ -480,7 +328,7 @@
             android:layout_height="240dp"
             android:background="@drawable/background_pop_up"
             android:layout_margin="@dimen/margin_large"
-            app:layout_constraintTop_toBottomOf="@id/week_day_1"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_weekday_home"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView

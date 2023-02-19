@@ -9,7 +9,7 @@
     <string name="cloud">Cloud</string>
     <string name="wind">Wind</string>
     <string name="humidity">Humidity</string>
-    <string name="feels_like">\"Feels like \"</string>
+    <string name="feels_like">Feels like </string>
     <string name="сelsius">℃</string>
     <string name="degree">°</string>
     <string name="percent">%</string>

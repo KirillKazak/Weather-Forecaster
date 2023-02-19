@@ -3,7 +3,7 @@ package com.kirill1995.kazzak.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kirill1995.kazzak.databinding.ActivityMainBinding
-import com.kirill1995.kazzak.ui.weatherInCurrentLocation.HomeFragment
+import com.kirill1995.kazzak.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var vbMain: ActivityMainBinding
