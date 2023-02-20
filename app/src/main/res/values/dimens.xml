@@ -20,6 +20,7 @@
     <dimen name="size_space_today">4dp</dimen>
     <dimen name="size_space_week_day">8dp</dimen>
     <dimen name="width_week_day_view">80dp</dimen>
+    <dimen name="size_lottie">200dp</dimen>
 
 
 </resources>

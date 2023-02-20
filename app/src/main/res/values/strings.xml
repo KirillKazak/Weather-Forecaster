@@ -14,4 +14,5 @@
     <string name="degree">°</string>
     <string name="percent">%</string>
     <string name="meter_sec">m/s</string>
+    <string name="error_404_text">The server is not responding at this time. Please sign in later.\n\nWe apologize for the inconvenience</string>
 </resources>

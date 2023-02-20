@@ -20,6 +20,7 @@ class HomeViewModel(
         MutableLiveData<ThreeHourForecastFiveDaysModel>()
     val geoLiveData =
         MutableLiveData<GeoModel>()
+    val errorLiveData = MutableLiveData<String>()
 
     override fun onCleared() {
         super.onCleared()
@@ -34,7 +35,9 @@ class HomeViewModel(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     threeHourForecastFiveDaysLiveData.postValue(it)
-                }, { })
+                }, {
+                    errorLiveData.postValue("Error")
+                })
         )
     }
 
@@ -45,7 +48,9 @@ class HomeViewModel(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     geoLiveData.postValue(it)
-                }, { })
+                }, {
+                    errorLiveData.postValue("Error")
+                })
         )
     }
 }
