@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/scroll_view_home"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_light">
+
+        <TextView
+            android:id="@+id/tv_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            android:text="@string/home"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_search_home"
+            android:layout_width="@dimen/size_search_icon"
+            android:layout_height="@dimen/size_search_icon"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:background="@drawable/icon_search"
+            app:layout_constraintBottom_toBottomOf="@id/tv_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_home" />
+
+        <ImageView
+            android:id="@+id/iv_main_weather_home"
+            android:layout_width="@dimen/size_main_weather"
+            android:layout_height="@dimen/size_main_weather"
+            android:layout_marginTop="@dimen/margin_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_home"
+            tools:background="@drawable/icon_sunny" />
+
+        <TextView
+            android:id="@+id/tv_main_temperature_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_main_weather"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_weather_home"
+            tools:text="28℃" />
+
+        <TextView
+            android:id="@+id/tv_city_name_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_main_temperature_home"
+            tools:text="Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, GB" />
+
+        <TextView
+            android:id="@+id/tv_description_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:textAlignment="center"
+            android:textColor="@color/color_wight_alpha70"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_city_name_home"
+            tools:text="Overcast clouds" />
+
+        <TextView
+            android:id="@+id/tv_feels_like_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:textAlignment="center"
+            android:textColor="@color/color_wight_alpha70"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_home"
+            tools:text="Feels like -25℃" />
+
+        <ImageView
+            android:id="@+id/iv_pop_up_current_home"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/background_pop_up"
+            android:layout_marginStart="@dimen/margin_pop_up_horizontal"
+            android:layout_marginEnd="@dimen/margin_pop_up_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/iv_cloud_current_home"
+            app:layout_constraintEnd_toEndOf="@id/tv_wind_current_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_feels_like_home" />
+
+        <ImageView
+            android:id="@+id/iv_cloud_current_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_cloud_rain"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_current_home"
+            app:layout_constraintEnd_toStartOf="@id/tv_cloud_current_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_current_home" />
+        <TextView
+            android:id="@+id/tv_cloud_current_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_current_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_drop_current_home"
+            app:layout_constraintStart_toEndOf="@id/iv_cloud_current_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_current_home"
+            tools:text="60%" />
+
+        <ImageView
+            android:id="@+id/iv_drop_current_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_drop"
+            android:layout_marginStart="@dimen/margin_large"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_current_home"
+            app:layout_constraintEnd_toStartOf="@id/tv_drop_current_home"
+            app:layout_constraintStart_toEndOf="@id/tv_cloud_current_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_current_home" />
+        <TextView
+            android:id="@+id/tv_drop_current_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_current_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_wind_current_home"
+            app:layout_constraintStart_toEndOf="@id/iv_drop_current_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_current_home"
+            tools:text="60%" />
+
+        <ImageView
+            android:id="@+id/iv_wind_current_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_wind"
+            android:layout_marginStart="@dimen/margin_large"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_current_home"
+            app:layout_constraintEnd_toStartOf="@id/tv_wind_current_home"
+            app:layout_constraintStart_toEndOf="@id/tv_drop_current_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_current_home" />
+        <TextView
+            android:id="@+id/tv_wind_current_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_current_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_wind_current_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_current_home"
+            tools:text="160km/h"/>
+
+        <ImageView
+            android:id="@+id/iv_pop_up_today_home"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/background_pop_up"
+            android:layout_margin="@dimen/margin_large"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/iv_pop_up_current_home"/>
+
+        <TextView
+            android:id="@+id/tv_today_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/iv_pop_up_today_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_today_home" />
+
+        <TextView
+            android:id="@+id/tv_date_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Dec, 23"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="@id/iv_pop_up_today_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_today_home" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_today_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/iv_pop_up_today_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_pop_up_today_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_home"
+            app:layout_constraintBottom_toBottomOf="@id/iv_pop_up_today_home"
+            tools:listitem="@layout/today_custom_view"/>
+
+        <ImageView
+            android:id="@+id/iv_sun_level_home"
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:background="@drawable/sun_level"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginHorizontal="@dimen/margin_extra_large"
+            app:layout_constraintTop_toBottomOf="@id/iv_pop_up_today_home"/>
+
+        <TextView
+            android:id="@+id/tv_time_sun_rise_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_level_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_sun_level_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_sun_level_home"
+            tools:text="23:00"/>
+
+        <ImageView
+            android:id="@+id/iv_time_sun_rise_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_sun_rise"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_level_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_sun_level_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_sun_rise_home" />
+
+        <TextView
+            android:id="@+id/tv_sun_rise_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sun_rise"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_level_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_sun_level_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_time_sun_rise_home" />
+
+        <TextView
+            android:id="@+id/tv_time_sun_set_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/margin_large"
+            app:layout_constraintStart_toEndOf="@id/iv_sun_level_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_level_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_sun_level_home"
+            tools:text="23:00"/>
+
+        <ImageView
+            android:id="@+id/iv_time_sun_set_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_sun_rise"
+            app:layout_constraintStart_toEndOf="@id/iv_sun_level_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_level_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_time_sun_set_home" />
+
+        <TextView
+            android:id="@+id/tv_sun_set_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sun_set"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/iv_sun_level_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_level_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_time_sun_set_home" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_weekday_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_home"/>
+
+        <ImageView
+            android:id="@+id/iv_pop_up_summary_home"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@drawable/background_pop_up"
+            android:layout_margin="@dimen/margin_large"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_weekday_home"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/summary"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/iv_pop_up_summary_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_summary_home" />
+
+        <TextView
+            android:id="@+id/tv_date_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Dec, 23"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            android:layout_margin="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="@id/iv_pop_up_summary_home"
+            app:layout_constraintTop_toTopOf="@id/iv_pop_up_summary_home" />
+
+        <ImageView
+            android:id="@+id/iv_thermometer_summary_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_thermometer"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/iv_pop_up_summary_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_cloud_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_thermometer_title_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/min_max"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/iv_thermometer_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_thermometer_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_thermometer_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_temperature_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_thermometer_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_thermometer_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_thermometer_title_summary_home"
+            tools:text="-3°/3°"/>
+
+        <ImageView
+            android:id="@+id/iv_cloud_summary_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_cloud_rain"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/iv_thermometer_summary_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_wind_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_cloud_title_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cloud"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/iv_cloud_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_cloud_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_cloud_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_cloud_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_cloud_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_cloud_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_cloud_title_summary_home"
+            tools:text="56%"/>
+
+        <ImageView
+            android:id="@+id/iv_wind_summary_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_wind"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/iv_cloud_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_pop_up_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_wind_title_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wind"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/iv_wind_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_wind_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_wind_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_wind_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_wind_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_wind_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_wind_title_summary_home"
+            tools:text="20km/h"/>
+
+        <ImageView
+            android:id="@+id/iv_sun_rise_summary_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_sun_rise"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="@id/iv_pop_up_summary_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_sun_set_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_temperature_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_sun_rise_title_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sun_rise"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_rise_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_rise_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_sun_rise_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_sun_rise_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_rise_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_rise_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_sun_rise_title_summary_home"
+            tools:text="06:00"/>
+
+        <ImageView
+            android:id="@+id/iv_sun_set_summary_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_sun_rise"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/iv_sun_rise_summary_home"
+            app:layout_constraintEnd_toStartOf="@id/iv_humidity_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_temperature_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_sun_set_title_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sun_set"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_set_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_set_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_sun_set_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_sun_set_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_sun_set_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_sun_set_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_sun_set_title_summary_home"
+            tools:text="06:00"/>
+
+        <ImageView
+            android:id="@+id/iv_humidity_summary_home"
+            android:layout_width="@dimen/size_forecast_icons"
+            android:layout_height="@dimen/size_forecast_icons"
+            android:background="@drawable/icon_drop"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/iv_sun_set_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_pop_up_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_temperature_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_humidity_title_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/humidity"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="@id/iv_humidity_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_humidity_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/iv_humidity_summary_home"/>
+
+        <TextView
+            android:id="@+id/tv_humidity_summary_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_regular"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/iv_humidity_summary_home"
+            app:layout_constraintEnd_toEndOf="@id/iv_humidity_summary_home"
+            app:layout_constraintTop_toBottomOf="@id/tv_humidity_title_summary_home"
+            tools:text="100%"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
+

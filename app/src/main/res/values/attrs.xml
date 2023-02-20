@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TodayCustomView">
+        <attr name="today_time" format="string"/>
+        <attr name="today_image" format="integer"/>
+        <attr name="today_temperature" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeekDayCustomView">
+        <attr name="week_day_day" format="string"/>
+        <attr name="week_day_date" format="string"/>
+        <attr name="week_day_image" format="integer"/>
+        <attr name="week_day_temperature" format="string"/>
+    </declare-styleable>
+</resources>

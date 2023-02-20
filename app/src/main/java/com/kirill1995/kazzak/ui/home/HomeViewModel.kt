@@ -1,4 +1,4 @@
-package com.kirill1995.kazzak.ui.weatherInCurrentLocation
+package com.kirill1995.kazzak.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,7 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
-class WeatherInCurrentLocationViewModel(
+class HomeViewModel(
     private val getThreeHourForecastFiveDaysDataUseCase: GetThreeHourForecastFiveDaysDataUseCase,
     private val getGeoDataUseCase: GetGeoDataUseCase
 ): ViewModel() {
@@ -20,6 +20,7 @@ class WeatherInCurrentLocationViewModel(
         MutableLiveData<ThreeHourForecastFiveDaysModel>()
     val geoLiveData =
         MutableLiveData<GeoModel>()
+    val errorLiveData = MutableLiveData<String>()
 
     override fun onCleared() {
         super.onCleared()
@@ -34,7 +35,9 @@ class WeatherInCurrentLocationViewModel(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     threeHourForecastFiveDaysLiveData.postValue(it)
-                }, { })
+                }, {
+                    errorLiveData.postValue("Error")
+                })
         )
     }
 
@@ -45,7 +48,9 @@ class WeatherInCurrentLocationViewModel(
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     geoLiveData.postValue(it)
-                }, { })
+                }, {
+                    errorLiveData.postValue("Error")
+                })
         )
     }
 }

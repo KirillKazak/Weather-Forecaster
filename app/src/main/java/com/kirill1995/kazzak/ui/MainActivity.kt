@@ -2,10 +2,8 @@ package com.kirill1995.kazzak.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.kirill1995.kazzak.R
 import com.kirill1995.kazzak.databinding.ActivityMainBinding
-import com.kirill1995.kazzak.ui.weatherInCurrentLocation.WeatherInCurrentLocationFragment
-import com.kirill1995.kazzak.ui.weatherInCurrentLocation.WeatherInCurrentLocationViewModel
+import com.kirill1995.kazzak.ui.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var vbMain: ActivityMainBinding
@@ -17,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction().add(
             vbMain.mainContainer.id,
-            WeatherInCurrentLocationFragment()
+            HomeFragment()
         ).commit()
     }
 }
